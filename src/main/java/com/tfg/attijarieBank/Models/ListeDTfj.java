@@ -26,7 +26,9 @@ public class ListeDTfj {
 	private Date DATF ;	
 	private String HEURF ;	
 	private String DUREE ;	
-	private Boolean ETAPE ;
+	
+	
+	
 	
 @ManyToOne()
 @JoinColumn(name = "ListeTfj_id" )
@@ -45,7 +47,6 @@ private ListeTfj listeTFJ ;
 		DATF = dATF;
 		HEURF = hEURF;
 		DUREE = dUREE;
-		ETAPE = eTAPE;
 		
 	}
 	
@@ -116,14 +117,5 @@ private ListeTfj listeTFJ ;
 	public void setDUREE(String dUREE) {
 		DUREE = dUREE;
 	}
-
-	public Boolean getETAPE() {
-		return ETAPE;
-	}
-
-	public void setETAPE(Boolean eTAPE) {
-		ETAPE = eTAPE;
-	}
-	
 
 }
