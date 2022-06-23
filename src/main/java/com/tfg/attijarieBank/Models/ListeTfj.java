@@ -1,5 +1,6 @@
 package com.tfg.attijarieBank.Models;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,7 +25,7 @@ public class ListeTfj {
 	private Long  NMVT;
 	@Id
 	@JsonFormat(pattern="yyyy-MM-dd")
-	private  java.sql.Date DCO	;
+	private  Timestamp DCO	;
 	
 	@OneToMany(mappedBy = "listeTFJ")
 	private List<ListeDTfj> listeDetailTfj = new ArrayList<>() ; 
@@ -33,7 +34,7 @@ public class ListeTfj {
 
 
 	
-	public ListeTfj(String t_TOT, String t_HI, Long nMVT, java.sql.Date dCO, List<ListeDTfj> listeDetailTfj) {
+	public ListeTfj(String t_TOT, String t_HI, Long nMVT, Timestamp dCO, List<ListeDTfj> listeDetailTfj) {
 		super();
 		T_TOT = t_TOT;
 		T_HI = t_HI;
@@ -55,7 +56,7 @@ public class ListeTfj {
 	}
 
 
-	public void setDCO(java.sql.Date dCO) {
+	public void setDCO(Timestamp dCO) {
 		DCO = dCO;
 	}
 

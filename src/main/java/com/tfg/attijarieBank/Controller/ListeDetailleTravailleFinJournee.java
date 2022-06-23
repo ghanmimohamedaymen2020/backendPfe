@@ -22,7 +22,7 @@ public class ListeDetailleTravailleFinJournee {
 	@RequestMapping(path = "/DetailleTFJ" , method = RequestMethod.GET)
 	public List<ListeDTfj>getDetailleTravailleFinJournee() {
 		
-		System.out.println(repositoaryDTFJ.findAll());
+		System.out.println(repositoaryDTFJ.findAll().toString());
 		return repositoaryDTFJ.findAll();
 		
 	}
