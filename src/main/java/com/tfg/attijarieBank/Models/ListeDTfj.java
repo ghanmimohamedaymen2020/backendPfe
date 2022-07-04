@@ -19,7 +19,7 @@ public class ListeDTfj {
     private String	PROG ;
 	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date DCO ;	
-	@JsonFormat(pattern="DD:MM:YYYY")
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date DATD ;	
 	
 	private String  HEURD ;

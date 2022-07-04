@@ -22,19 +22,18 @@ public class ListeTfj {
 	private String T_TOT;
 		
 	private String  T_HI;
-	private Long  NMVT;
+	private Long  NMVT; 
 	@Id
 	@JsonFormat(pattern="yyyy-MM-dd")
-	private  Timestamp DCO	;
+	private  Date DCO	;
 	
 	@OneToMany(mappedBy = "listeTFJ")
 	private List<ListeDTfj> listeDetailTfj = new ArrayList<>() ; 
 	
 
 
-
 	
-	public ListeTfj(String t_TOT, String t_HI, Long nMVT, Timestamp dCO, List<ListeDTfj> listeDetailTfj) {
+	public ListeTfj(String t_TOT, String t_HI, Long nMVT, Date dCO, List<ListeDTfj> listeDetailTfj) {
 		super();
 		T_TOT = t_TOT;
 		T_HI = t_HI;
