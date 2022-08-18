@@ -2,8 +2,7 @@ package com.tfg.attijarieBank.Models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -37,43 +36,177 @@ private String DureeIncident ;
 @Column(name="StatutResolution")
 
 private String StatutResolution ;
+private String Composantimpacte ;
+private String domaine;
+
+private String dateReclamation;
+private String nomDemandeur ;
+private String  nomIntervenants;
+private String  origine;
+private String revision;
+private String dateModification;
+private String visaIntervenants;
+private String object;
 
 
 
 
 
 
-public FicheIntevention() {
-	
-}
+
+
+public FicheIntevention() {}
 
 
 
-public FicheIntevention(int id, String pROG, String constats, String detailInvestigations, String causeIncident,
-		String consequencesIncident, String dureeIncident, String actionsRealisees, String statutResolution) {
-	//this.id = id;
-	this.PROG = pROG;
-	this.Constats = constats;
-	this.DetailInvestigations = detailInvestigations;
-	this.CauseIncident = causeIncident;
-	this.ConsequencesIncident = consequencesIncident;
-	this.DureeIncident = dureeIncident;
+
+
+
+
+
+public FicheIntevention(String pROG, String actionsRealisees, String constats, String detailInvestigations,
+		String causeIncident, String consequencesIncident, String dureeIncident, String statutResolution,
+		String composantimpacte, String domaine, String dateReclamation, String nomDemandeur, String nomIntervenants,
+		String origine, String revision, String dateModification, String visaIntervenants, String object) {
+	super();
+	PROG = pROG;
 	this.actionsRealisees = actionsRealisees;
-	this.StatutResolution = statutResolution;
+	Constats = constats;
+	DetailInvestigations = detailInvestigations;
+	CauseIncident = causeIncident;
+	ConsequencesIncident = consequencesIncident;
+	DureeIncident = dureeIncident;
+	StatutResolution = statutResolution;
+	Composantimpacte = composantimpacte;
+	this.domaine = domaine;
+	this.dateReclamation = dateReclamation;
+	this.nomDemandeur = nomDemandeur;
+	this.nomIntervenants = nomIntervenants;
+	this.origine = origine;
+	this.revision = revision;
+	this.dateModification = dateModification;
+	this.visaIntervenants = visaIntervenants;
+	this.object = object;
 }
+
+
+
+public String getComposantimpacte() {
+	return Composantimpacte;
+}
+
+
+
+public void setComposantimpacte(String composantimpacte) {
+	Composantimpacte = composantimpacte;
+}
+
+
+
+public String getDomaine() {
+	return domaine;
+}
+
+
+
+public void setDomaine(String domaine) {
+	this.domaine = domaine;
+}
+
+
+
+public String getDateReclamation() {
+	return dateReclamation;
+}
+
+
+
+public void setDateReclamation(String dateReclamation) {
+	this.dateReclamation = dateReclamation;
+}
+
+
+
+public String getNomDemandeur() {
+	return nomDemandeur;
+}
+
+
+
+public void setNomDemandeur(String nomDemandeur) {
+	this.nomDemandeur = nomDemandeur;
+}
+
+
+
+public String getNomIntervenants() {
+	return nomIntervenants;
+}
+
+
+
+public void setNomIntervenants(String nomIntervenants) {
+	this.nomIntervenants = nomIntervenants;
+}
+
+
+
+public String getOrigine() {
+	return origine;
+}
+
+
+
+public void setOrigine(String origine) {
+	this.origine = origine;
+}
+
+
+
+public String getRevision() {
+	return revision;
+}
+
+
+
+public void setRevision(String revision) {
+	this.revision = revision;
+}
+
+
+
+public String getDateModification() {
+	return dateModification;
+}
+
+
+
+public void setDateModification(String dateModification) {
+	this.dateModification = dateModification;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
 @Override
 public String toString() {
-	return "FicheIntevention [ PROG=" + PROG + ", actionsRealisees=" + actionsRealisees + ", Constats="
-			+ Constats + ", DetailInvestigations=" + DetailInvestigations + ", CauseIncident=" + CauseIncident
+	return "FicheIntevention [PROG=" + PROG + ", actionsRealisees=" + actionsRealisees + ", Constats=" + Constats
+			+ ", DetailInvestigations=" + DetailInvestigations + ", CauseIncident=" + CauseIncident
 			+ ", ConsequencesIncident=" + ConsequencesIncident + ", DureeIncident=" + DureeIncident
-			+ ", StatutResolution=" + StatutResolution + "]";
+			+ ", StatutResolution=" + StatutResolution + ", Composantimpacte=" + Composantimpacte + ", domaine="
+			+ domaine + ", dateReclamation=" + dateReclamation + ", nomDemandeur=" + nomDemandeur + ", nomIntervenants="
+			+ nomIntervenants + ", origine=" + origine + ", revision=" + revision + ", dateModification="
+			+ dateModification + "]";
 }
-
-
-
 
 
 
@@ -169,6 +302,30 @@ public String getStatutResolution() {
 
 public void setStatutResolution(String statutResolution) {
 	StatutResolution = statutResolution;
+}
+
+
+
+public String getVisaIntervenants() {
+	return visaIntervenants;
+}
+
+
+
+public void setVisaIntervenants(String visaIntervenants) {
+	this.visaIntervenants = visaIntervenants;
+}
+
+
+
+public String getObject() {
+	return object;
+}
+
+
+
+public void setObject(String object) {
+	this.object = object;
 }
 
 

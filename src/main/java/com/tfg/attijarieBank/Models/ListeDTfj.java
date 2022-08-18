@@ -1,29 +1,32 @@
 package com.tfg.attijarieBank.Models;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 
 @Entity
 @Table(name = "fjo_stat1")
-public class ListeDTfj {
+@IdClass(ProgrammeId.class)
+public class ListeDTfj implements Serializable{
 	
 	@Id
     private String	PROG ;
-	@JsonFormat(pattern="yyyy-MM-dd")
+	//@JsonFormat(pattern="yyyy-MM-dd")
+	@Id
 	private Date DCO ;	
-	@JsonFormat(pattern="yyyy-MM-dd")
+	//@JsonFormat(pattern="yyyy-MM-dd")
 	private Date DATD ;	
 	
 	private String  HEURD ;
-	@JsonFormat(pattern="yyyy-MM-dd")
+	//@JsonFormat(pattern="yyyy-MM-dd")
 	private Date DATF ;	
 	private String HEURF ;	
 	private String DUREE ;

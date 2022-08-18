@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 
 @Entity
-@Table(name = "TFJ")
+@Table(name = "fjo_stat2")
 public class ListeTfj {
 	
 

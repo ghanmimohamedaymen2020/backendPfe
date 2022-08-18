@@ -14,14 +14,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tfg.attijarieBank.Models.FicheIntevention;
 import com.tfg.attijarieBank.Repository.FicheInterventionRepository;
 import com.tfg.attijarieBank.exception.ResourceNotFoundException;
+@CrossOrigin(origins = "http://localhost:4200/")
 
 @RestController
-@CrossOrigin(origins = "*")
 
 public class FicheInteventionController {
 	
@@ -43,7 +45,8 @@ public class FicheInteventionController {
 		
 	}
 	
-	@PostMapping("/addNewFicheIntervention")
+	@RequestMapping(method = RequestMethod.POST,path= "/addNewFicheIntervention" )
+
 	public FicheIntevention addFicheIntervention(@RequestBody FicheIntevention ficheIntervention) {
 		return this.ficheInterventionRepository.save(ficheIntervention);
 		
